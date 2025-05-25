@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  CV-back:
+    build:
+      context: ./CV-back
+    networks:
+      - cv-reseau
+
+  CV-front:
+    build:
+      context: ./CV-front
+    networks:
+      - cv-reseau
+
+  db:
+    image: postgres:16
+    container_name: db-cv
+    restart: always
+    environment:
+      POSTGRES_USER: samuel
+      POSTGRES_PASSWORD: iwantmyjob
+      POSTGRES_DB: CvData
+    ports:
+      - "5433:5432"
+    volumes:
+      - ./data:/var/lib/postgresql/data
+    networks:
+      - cv-reseau
+
+networks:
+  cv-reseau:
+    external: true
