@@ -17,7 +17,7 @@ services:
     ports:
       - "8080:8080"
 
-  db-cv:
+  db:
     image: postgres:16
     container_name: db-cv
     restart: always
