@@ -15,7 +15,7 @@ services:
     networks:
       - cv-reseau
     ports:
-      - "80:80"
+      - "80:8080"
 
   db:
     image: postgres:16
