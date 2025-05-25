@@ -17,7 +17,7 @@ services:
     ports:
       - "8080:8080"
 
-  db:
+  db-cv:
     image: postgres:16
     container_name: db-cv
     restart: always
@@ -26,7 +26,7 @@ services:
       POSTGRES_PASSWORD: iwantmyjob
       POSTGRES_DB: CvData
     volumes:
-      - ./data:/var/lib/postgresql/data
+      - ./CV-db/data:/var/lib/postgresql/data
     networks:
       - cv-reseau
     expose:
