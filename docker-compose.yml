@@ -26,7 +26,7 @@ services:
       POSTGRES_PASSWORD: iwantmyjob
       POSTGRES_DB: CvData
     volumes:
-      - ./CV-db/data:/var/lib/postgresql/data
+      - ./CV-db/db-init:/docker-entrypoint-initdb.d
     networks:
       - cv-reseau
     expose:
