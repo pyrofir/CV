@@ -1,0 +1,9 @@
+[submodule "CV-front"]
+	path = CV-front
+	url = git@github.com:pyrofir/CV-front.git
+[submodule "CV-db"]
+	path = CV-db
+	url = git@github.com:pyrofir/CV-db.git
+[submodule "CV-back"]
+	path = CV-back
+	url = git@github.com:pyrofir/CV-back.git
