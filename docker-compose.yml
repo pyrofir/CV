@@ -1,13 +1,13 @@
 version: '3.8'
 
 services:
-  CV-back:
+  cv-back:
     build:
       context: ./CV-back
     networks:
       - cv-reseau
 
-  CV-front:
+  cv-front:
     build:
       context: ./CV-front
     networks:
